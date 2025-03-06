@@ -3,24 +3,29 @@
   "name": "Zenn Scrap Flashcard",
   "version": "1.0",
   "description": "Displays Zenn scraps as flashcards.",
-  "permissions": [
-    "storage",
-    "activeTab",
-    "tabs",
-    "scripting"
-  ],
-  "host_permissions": [
-    "https://zenn.dev/*"
-  ],
+  "permissions": ["storage", "activeTab", "tabs", "scripting"],
+  "host_permissions": ["https://zenn.dev/*"],
+  "icons": {
+    "16": "images/icon_16.png",
+    "48": "images/icon_48.png",
+    "128": "images/icon_128.png"
+  },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Zenn Scrap Flashcard"
+    "default_title": "Zenn Scrap Flashcard",
+    "default_icon": {
+      "16": "images/icon_16.png",
+      "48": "images/icon_48.png",
+      "128": "images/icon_128.png"
+    }
   },
   "background": {
     "service_worker": "background.js"
   },
-  "web_accessible_resources": [{
-    "resources": ["flashcard.html"],
-    "matches": ["<all_urls>"]
-  }]
+  "web_accessible_resources": [
+    {
+      "resources": ["flashcard.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }
