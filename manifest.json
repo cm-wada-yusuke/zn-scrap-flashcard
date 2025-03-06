@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Zenn Scrap Flashcard",
+  "version": "1.0",
+  "description": "Displays Zenn scraps as flashcards.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://zenn.dev/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Zenn Scrap Flashcard"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [{
+    "resources": ["flashcard.html"],
+    "matches": ["<all_urls>"]
+  }]
+}
